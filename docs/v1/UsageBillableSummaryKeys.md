@@ -11,12 +11,18 @@
 | **infra_container_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **infra_host_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **infra_host_top99p** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
+| **iot_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **iot_top99p** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **lambda_function_average** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **logs_indexed_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **logs_ingested_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
+| **network_device_top99p** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **npm_flow_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
+| **npm_host_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **npm_host_top99p** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
+| **prof_container_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
+| **prof_host_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
+| **prof_host_top99p** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **rum_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **serverless_invocation_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
 | **siem_sum** | [**UsageBillableSummaryBody**](UsageBillableSummaryBody.md) |  | [optional] |
@@ -37,12 +43,18 @@ instance = DatadogAPIClient::V1::UsageBillableSummaryKeys.new(
   infra_container_sum: null,
   infra_host_sum: null,
   infra_host_top99p: null,
+  iot_sum: null,
   iot_top99p: null,
   lambda_function_average: null,
   logs_indexed_sum: null,
   logs_ingested_sum: null,
+  network_device_top99p: null,
   npm_flow_sum: null,
+  npm_host_sum: null,
   npm_host_top99p: null,
+  prof_container_sum: null,
+  prof_host_sum: null,
+  prof_host_top99p: null,
   rum_sum: null,
   serverless_invocation_sum: null,
   siem_sum: null,

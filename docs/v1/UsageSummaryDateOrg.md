@@ -12,7 +12,7 @@
 | **aws_lambda_invocations_sum** | **Integer** | Shows the sum of all AWS Lambda invocations over all hours in the current date for the given org. | [optional] |
 | **azure_app_service_top99p** | **Integer** | Shows the 99th percentile of all Azure app services over all hours in the current date for the given org. | [optional] |
 | **billable_ingested_bytes_sum** | **Integer** | Shows the sum of all log bytes ingested over all hours in the current date for the given org. | [optional] |
-| **compliance_container_agg_sum** | **Object** | Shows the sum of all compliance containers over all hours in the current date for the given org. | [optional] |
+| **compliance_container_agg_sum** | **Integer** | Shows the sum of all compliance containers over all hours in the current date for the given org. | [optional] |
 | **compliance_host_agg_sum** | **Integer** | Shows the sum of all compliance hosts over all hours in the current date for the given org. | [optional] |
 | **container_avg** | **Integer** | Shows the average of all distinct containers over all hours in the current date for the given org. | [optional] |
 | **container_hwm** | **Integer** | Shows the high-water mark of all distinct containers over all hours in the current date for the given org. | [optional] |

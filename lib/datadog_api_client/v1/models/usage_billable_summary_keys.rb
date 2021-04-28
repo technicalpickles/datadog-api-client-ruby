@@ -33,6 +33,8 @@ module DatadogAPIClient::V1
 
     attr_accessor :infra_host_top99p
 
+    attr_accessor :iot_sum
+
     attr_accessor :iot_top99p
 
     attr_accessor :lambda_function_average
@@ -41,9 +43,19 @@ module DatadogAPIClient::V1
 
     attr_accessor :logs_ingested_sum
 
+    attr_accessor :network_device_top99p
+
     attr_accessor :npm_flow_sum
 
+    attr_accessor :npm_host_sum
+
     attr_accessor :npm_host_top99p
+
+    attr_accessor :prof_container_sum
+
+    attr_accessor :prof_host_sum
+
+    attr_accessor :prof_host_top99p
 
     attr_accessor :rum_sum
 
@@ -67,12 +79,18 @@ module DatadogAPIClient::V1
         :'infra_container_sum' => :'infra_container_sum',
         :'infra_host_sum' => :'infra_host_sum',
         :'infra_host_top99p' => :'infra_host_top99p',
+        :'iot_sum' => :'iot_sum',
         :'iot_top99p' => :'iot_top99p',
         :'lambda_function_average' => :'lambda_function_average',
         :'logs_indexed_sum' => :'logs_indexed_sum',
         :'logs_ingested_sum' => :'logs_ingested_sum',
+        :'network_device_top99p' => :'network_device_top99p',
         :'npm_flow_sum' => :'npm_flow_sum',
+        :'npm_host_sum' => :'npm_host_sum',
         :'npm_host_top99p' => :'npm_host_top99p',
+        :'prof_container_sum' => :'prof_container_sum',
+        :'prof_host_sum' => :'prof_host_sum',
+        :'prof_host_top99p' => :'prof_host_top99p',
         :'rum_sum' => :'rum_sum',
         :'serverless_invocation_sum' => :'serverless_invocation_sum',
         :'siem_sum' => :'siem_sum',
@@ -97,12 +115,18 @@ module DatadogAPIClient::V1
         :'infra_container_sum' => :'UsageBillableSummaryBody',
         :'infra_host_sum' => :'UsageBillableSummaryBody',
         :'infra_host_top99p' => :'UsageBillableSummaryBody',
+        :'iot_sum' => :'UsageBillableSummaryBody',
         :'iot_top99p' => :'UsageBillableSummaryBody',
         :'lambda_function_average' => :'UsageBillableSummaryBody',
         :'logs_indexed_sum' => :'UsageBillableSummaryBody',
         :'logs_ingested_sum' => :'UsageBillableSummaryBody',
+        :'network_device_top99p' => :'UsageBillableSummaryBody',
         :'npm_flow_sum' => :'UsageBillableSummaryBody',
+        :'npm_host_sum' => :'UsageBillableSummaryBody',
         :'npm_host_top99p' => :'UsageBillableSummaryBody',
+        :'prof_container_sum' => :'UsageBillableSummaryBody',
+        :'prof_host_sum' => :'UsageBillableSummaryBody',
+        :'prof_host_top99p' => :'UsageBillableSummaryBody',
         :'rum_sum' => :'UsageBillableSummaryBody',
         :'serverless_invocation_sum' => :'UsageBillableSummaryBody',
         :'siem_sum' => :'UsageBillableSummaryBody',
@@ -161,6 +185,10 @@ module DatadogAPIClient::V1
         self.infra_host_top99p = attributes[:'infra_host_top99p']
       end
 
+      if attributes.key?(:'iot_sum')
+        self.iot_sum = attributes[:'iot_sum']
+      end
+
       if attributes.key?(:'iot_top99p')
         self.iot_top99p = attributes[:'iot_top99p']
       end
@@ -177,12 +205,32 @@ module DatadogAPIClient::V1
         self.logs_ingested_sum = attributes[:'logs_ingested_sum']
       end
 
+      if attributes.key?(:'network_device_top99p')
+        self.network_device_top99p = attributes[:'network_device_top99p']
+      end
+
       if attributes.key?(:'npm_flow_sum')
         self.npm_flow_sum = attributes[:'npm_flow_sum']
       end
 
+      if attributes.key?(:'npm_host_sum')
+        self.npm_host_sum = attributes[:'npm_host_sum']
+      end
+
       if attributes.key?(:'npm_host_top99p')
         self.npm_host_top99p = attributes[:'npm_host_top99p']
+      end
+
+      if attributes.key?(:'prof_container_sum')
+        self.prof_container_sum = attributes[:'prof_container_sum']
+      end
+
+      if attributes.key?(:'prof_host_sum')
+        self.prof_host_sum = attributes[:'prof_host_sum']
+      end
+
+      if attributes.key?(:'prof_host_top99p')
+        self.prof_host_top99p = attributes[:'prof_host_top99p']
       end
 
       if attributes.key?(:'rum_sum')
@@ -235,12 +283,18 @@ module DatadogAPIClient::V1
           infra_container_sum == o.infra_container_sum &&
           infra_host_sum == o.infra_host_sum &&
           infra_host_top99p == o.infra_host_top99p &&
+          iot_sum == o.iot_sum &&
           iot_top99p == o.iot_top99p &&
           lambda_function_average == o.lambda_function_average &&
           logs_indexed_sum == o.logs_indexed_sum &&
           logs_ingested_sum == o.logs_ingested_sum &&
+          network_device_top99p == o.network_device_top99p &&
           npm_flow_sum == o.npm_flow_sum &&
+          npm_host_sum == o.npm_host_sum &&
           npm_host_top99p == o.npm_host_top99p &&
+          prof_container_sum == o.prof_container_sum &&
+          prof_host_sum == o.prof_host_sum &&
+          prof_host_top99p == o.prof_host_top99p &&
           rum_sum == o.rum_sum &&
           serverless_invocation_sum == o.serverless_invocation_sum &&
           siem_sum == o.siem_sum &&
@@ -258,7 +312,7 @@ module DatadogAPIClient::V1
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [apm_host_sum, apm_host_top99p, apm_trace_search_sum, fargate_container_average, infra_container_sum, infra_host_sum, infra_host_top99p, iot_top99p, lambda_function_average, logs_indexed_sum, logs_ingested_sum, npm_flow_sum, npm_host_top99p, rum_sum, serverless_invocation_sum, siem_sum, synthetics_api_tests_sum, synthetics_browser_checks_sum, timeseries_average].hash
+      [apm_host_sum, apm_host_top99p, apm_trace_search_sum, fargate_container_average, infra_container_sum, infra_host_sum, infra_host_top99p, iot_sum, iot_top99p, lambda_function_average, logs_indexed_sum, logs_ingested_sum, network_device_top99p, npm_flow_sum, npm_host_sum, npm_host_top99p, prof_container_sum, prof_host_sum, prof_host_top99p, rum_sum, serverless_invocation_sum, siem_sum, synthetics_api_tests_sum, synthetics_browser_checks_sum, timeseries_average].hash
     end
 
     # Builds the object from hash
