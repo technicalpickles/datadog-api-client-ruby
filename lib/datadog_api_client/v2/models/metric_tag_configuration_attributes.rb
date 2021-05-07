@@ -27,11 +27,11 @@ module DatadogAPIClient::V2
 
     attr_accessor :metric_type
 
-    # Timestamp when the tag configuration was last modified.
-    attr_accessor :modified_at
-
     # List of tag keys on which to group.
     attr_accessor :tags
+
+    # Timestamp when the tag configuration was last updated.
+    attr_accessor :updated_at
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -39,8 +39,8 @@ module DatadogAPIClient::V2
         :'created_at' => :'created_at',
         :'include_percentiles' => :'include_percentiles',
         :'metric_type' => :'metric_type',
-        :'modified_at' => :'modified_at',
-        :'tags' => :'tags'
+        :'tags' => :'tags',
+        :'updated_at' => :'updated_at'
       }
     end
 
@@ -55,8 +55,8 @@ module DatadogAPIClient::V2
         :'created_at' => :'Time',
         :'include_percentiles' => :'Boolean',
         :'metric_type' => :'MetricTagConfigurationMetricTypes',
-        :'modified_at' => :'Time',
-        :'tags' => :'Array<String>'
+        :'tags' => :'Array<String>',
+        :'updated_at' => :'Time'
       }
     end
 
@@ -95,14 +95,14 @@ module DatadogAPIClient::V2
         self.metric_type = 'gauge'
       end
 
-      if attributes.key?(:'modified_at')
-        self.modified_at = attributes[:'modified_at']
-      end
-
       if attributes.key?(:'tags')
         if (value = attributes[:'tags']).is_a?(Array)
           self.tags = value
         end
+      end
+
+      if attributes.key?(:'updated_at')
+        self.updated_at = attributes[:'updated_at']
       end
     end
 
@@ -127,8 +127,8 @@ module DatadogAPIClient::V2
           created_at == o.created_at &&
           include_percentiles == o.include_percentiles &&
           metric_type == o.metric_type &&
-          modified_at == o.modified_at &&
-          tags == o.tags
+          tags == o.tags &&
+          updated_at == o.updated_at
     end
 
     # @see the `==` method
@@ -140,7 +140,7 @@ module DatadogAPIClient::V2
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [created_at, include_percentiles, metric_type, modified_at, tags].hash
+      [created_at, include_percentiles, metric_type, tags, updated_at].hash
     end
 
     # Builds the object from hash
