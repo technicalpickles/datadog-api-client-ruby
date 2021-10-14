@@ -25,14 +25,14 @@ module DatadogAPIClient::V1
     # Branch name.
     attr_accessor :branch
 
-    # Commit SHA.
+    # The commit SHA.
     attr_accessor :commit_sha
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'branch' => :'branch',
-        :'commit_sha' => :'commit_sha'
+        :'commit_sha' => :'commitSha'
       }
     end
 

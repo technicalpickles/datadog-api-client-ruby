@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **branch** | **String** | Branch name. | [optional] |
-| **commit_sha** | **String** | Commit SHA. | [optional] |
+| **commit_sha** | **String** | The commit SHA. | [optional] |
 
 ## Example
 

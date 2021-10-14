@@ -17,7 +17,7 @@ require 'date'
 require 'time'
 
 module DatadogAPIClient::V1
-  # Metadata for the Synthetics tests run
+  # Metadata for the Synthetics tests run.
   class SyntheticsCITestMetadata
     # whether the object has unparsed attributes
     attr_accessor :_unparsed
@@ -42,7 +42,7 @@ module DatadogAPIClient::V1
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'ci' => :'SyntheticsCITestMetadataCi',
+        :'ci' => :'SyntheticsCITestMetadataCI',
         :'git' => :'SyntheticsCITestMetadataGit'
       }
     end

@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ci** | [**SyntheticsCITestMetadataCi**](SyntheticsCITestMetadataCi.md) |  | [optional] |
+| **ci** | [**SyntheticsCITestMetadataCI**](SyntheticsCITestMetadataCI.md) |  | [optional] |
 | **git** | [**SyntheticsCITestMetadataGit**](SyntheticsCITestMetadataGit.md) |  | [optional] |
 
 ## Example

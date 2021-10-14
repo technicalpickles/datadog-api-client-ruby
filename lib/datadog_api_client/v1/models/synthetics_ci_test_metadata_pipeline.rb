@@ -17,29 +17,18 @@ require 'date'
 require 'time'
 
 module DatadogAPIClient::V1
-  # Configuration object for a Synthetic API test.
-  class SyntheticsAPITestConfig
+  # Description of the CI pipeline.
+  class SyntheticsCITestMetadataPipeline
     # whether the object has unparsed attributes
     attr_accessor :_unparsed
 
-    # Array of assertions used for the test. Required for single API tests.
-    attr_accessor :assertions
-
-    # Array of variables used for the test.
-    attr_accessor :config_variables
-
-    attr_accessor :request
-
-    # When the test subtype is `multi`, the steps of the test.
-    attr_accessor :steps
+    # Name of the pipeline.
+    attr_accessor :url
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'assertions' => :'assertions',
-        :'config_variables' => :'configVariables',
-        :'request' => :'request',
-        :'steps' => :'steps'
+        :'url' => :'url'
       }
     end
 
@@ -51,10 +40,7 @@ module DatadogAPIClient::V1
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'assertions' => :'Array<SyntheticsAssertion>',
-        :'config_variables' => :'Array<SyntheticsConfigVariable>',
-        :'request' => :'SyntheticsTestRequest',
-        :'steps' => :'Array<SyntheticsAPIStep>'
+        :'url' => :'String'
       }
     end
 
@@ -68,37 +54,19 @@ module DatadogAPIClient::V1
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `DatadogAPIClient::V1::SyntheticsAPITestConfig` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `DatadogAPIClient::V1::SyntheticsCITestMetadataPipeline` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `DatadogAPIClient::V1::SyntheticsAPITestConfig`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `DatadogAPIClient::V1::SyntheticsCITestMetadataPipeline`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'assertions')
-        if (value = attributes[:'assertions']).is_a?(Array)
-          self.assertions = value
-        end
-      end
-
-      if attributes.key?(:'config_variables')
-        if (value = attributes[:'config_variables']).is_a?(Array)
-          self.config_variables = value
-        end
-      end
-
-      if attributes.key?(:'request')
-        self.request = attributes[:'request']
-      end
-
-      if attributes.key?(:'steps')
-        if (value = attributes[:'steps']).is_a?(Array)
-          self.steps = value
-        end
+      if attributes.key?(:'url')
+        self.url = attributes[:'url']
       end
     end
 
@@ -120,10 +88,7 @@ module DatadogAPIClient::V1
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          assertions == o.assertions &&
-          config_variables == o.config_variables &&
-          request == o.request &&
-          steps == o.steps
+          url == o.url
     end
 
     # @see the `==` method
@@ -135,7 +100,7 @@ module DatadogAPIClient::V1
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [assertions, config_variables, request, steps].hash
+      [url].hash
     end
 
     # Builds the object from hash
